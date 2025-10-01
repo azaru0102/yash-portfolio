@@ -14,7 +14,7 @@ jobs:
       - name: configure-aws
         uses: aws-actions/configure-aws-credentials
         with: 
-          aws-access-key-id: ${{ secrects.AWS_ACCESS_KEY_ID }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-serect-access-key: ${{ secrets.AWS_SECRECT_ACCESS_KEY }}
           region: ap-south-1
 
