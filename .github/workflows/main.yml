@@ -14,8 +14,12 @@ jobs:
       - name: configure-aws
         uses: aws-actions/configure-aws-credentials
         with: 
-          aws-access-key-id: 
-          
+          aws-access-key-id: ${{ secrects.AWS_ACCESS_KEY_ID }}
+          aws-serect-access-key: ${{ serects.AWS_SECRECT_ACCESS_KEY }}
+          region: ap-south-1
+
+      - name: deploy the static-web
+        run: aws s3 sync . s3://demo-bucket-0102 --delete
     
      
   
